@@ -44,3 +44,11 @@ ng.forEach($objectToIterate$, function ($iteratedObject$) {
 ```html
 {%  trans '$END$' %}
 ```
+
+- **btrans**
+
+```html
+{% blocktrans context '$where$/$what$' %}
+    $END$
+{% endblocktrans %}
+```
