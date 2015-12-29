@@ -1,4 +1,4 @@
-## Run command line one system load
+## Run command line on system load
 
 go into `~/.config/autostart/` and create a file with a `.desktop` extension.
 
