@@ -5,8 +5,3 @@
 ```console
 $ find . -name '.DS_Store' -delete
 ```
-
-### pip install saving in requirements.txt on the fly
-```console
-$ pip install [package] && pip freeze > /path/to/requirements.txt
-```
