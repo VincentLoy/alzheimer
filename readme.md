@@ -1,3 +1,3 @@
 # alzheimer
 
-Linguist : [https://github.com/github/linguist/blob/master/lib/linguist/languages.yml](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
+Because copy-pasting is really quicker than Googling.
