@@ -17,6 +17,12 @@
 console.log('$END$');
 ```
 
+- **cslv**
+
+```js
+console.log('$VAR$', $VAR$);$END$
+```
+
 - **iife**
 
 ```js
