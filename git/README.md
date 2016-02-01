@@ -12,7 +12,7 @@ $ git rm --cached -r mydirectory
 git tag -d [TAG_NAME]
 ```
 
-### Delete a already pushed
+### Delete an already pushed tag
 ```console
 git push origin :refs/tags/[TAG_NAME]
 ```
