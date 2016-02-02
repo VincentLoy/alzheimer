@@ -28,7 +28,7 @@ postgres=# CREATE EXTENSION IF NOT EXISTS postgis;
 
 ### Make an SQL dump
 ```console
-$ pg_dump dbname > outfile
+$ pg_dump -c -O -x --if-exists dbname > outfile
 ```
 
 ### Inject an SQL Dump to an existing DB
