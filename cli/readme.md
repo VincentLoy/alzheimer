@@ -6,6 +6,12 @@
 $ find . -name '.DS_Store' -delete
 ```
 
+### Remove recursively all `node_modules` folder (or any folders you want). Saves a lot of space.
+
+```console
+$ find . -name "node_modules" -exec rm -rf '{}' +
+```
+
 ### Resize all images of a certain format by a certain percentage (e.g png, 50%)
 
 ```console
