@@ -31,6 +31,20 @@ postgres=# CREATE EXTENSION IF NOT EXISTS postgis;
 $ pg_dump -c -O -x --if-exists dbname > dump_$(date -Iseconds).sql
 ```
 
+Bonus. You can define this function in your `.zshrc` (or directly from the shell):
+
+```bash
+function pg_dump_to_file {
+    sudo -u postgres pg_dump -c -O -x --if-exists $1 > $1_$(date -Iseconds).sql
+}
+```
+
+Then simply call it
+
+```console
+$ pg_dump_to_file my_db_name
+```
+
 ### Inject an SQL Dump to an existing DB
 ```console
 $ psql your_db_name < /path/to/dump.sql
