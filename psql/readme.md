@@ -48,6 +48,9 @@ $ pg_dump_to_file my_db_name
 ### Inject an SQL Dump to an existing DB
 ```console
 $ psql your_db_name < /path/to/dump.sql
+
+# you may have to be root so
+$ sudo -u postgres psql db_name < /path/to/dump.sql
 ```
 
 ### Postgres URL format
