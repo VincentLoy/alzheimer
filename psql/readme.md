@@ -49,8 +49,8 @@ $ pg_dump_to_file my_db_name
 ```console
 $ psql your_db_name < /path/to/dump.sql
 
-# you may have to be root so
-$ sudo -u postgres psql db_name < /path/to/dump.sql
+# The pro way
+$ psql -U DB_USER -W -h 127.0.0.1 DB_NAME < the_magic_dump.sql
 ```
 
 ### list Database and Users (Roles) example
