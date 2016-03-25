@@ -53,6 +53,37 @@ $ psql your_db_name < /path/to/dump.sql
 $ sudo -u postgres psql db_name < /path/to/dump.sql
 ```
 
+### list Database and Users (Roles) example
+
+##### List databases 
+
+```console
+postgres=> \l
+                                  List of databases
+   Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges    
+-----------+----------+----------+-------------+-------------+------------------------
+ tralalala | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =Tc/postgres          +
+           |          |          |             |             | postgres=CTc/postgres +
+           |          |          |             |             | vincent=CTc/postgres  +
+           |          |          |             |             | tralalala=CTc/postgres
+ awesome   | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =Tc/postgres          +
+           |          |          |             |             | postgres=CTc/postgres +
+           |          |          |             |             | awesome=CTc/postgres
+
+```
+
+##### List roles
+```console
+postgres=> \du
+                             List of roles
+ Role name |                   Attributes                   | Member of 
+-----------+------------------------------------------------+-----------
+ cornichon |                                                | {}
+ pommes    |                                                | {}
+ poireaux  |                                                | {}
+
+```
+
 ### Postgres URL format
 use the following template in every Django projects `postgres://username:password@hostname/db_name`
 
