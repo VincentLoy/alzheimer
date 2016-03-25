@@ -81,6 +81,7 @@ postgres=> \du
  cornichon |                                                | {}
  pommes    |                                                | {}
  poireaux  |                                                | {}
+ postgres  | Superuser, Create role, Create DB, Replication | {}
 
 ```
 
