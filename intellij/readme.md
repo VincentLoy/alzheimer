@@ -8,6 +8,7 @@
 - **Alt Enter** ➞ Show what the IDE can do
 - **Ctrl E** ➞ Recent files
 - **Ctrl Y** ➞ Delete Line
+- **Ctrl W** ➞ Smart text selection *(use this shortcut multiple times)*
 
 ## Useful code snippets
 
