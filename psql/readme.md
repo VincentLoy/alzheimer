@@ -85,6 +85,18 @@ postgres=> \du
 
 ```
 
+### Solving error
+##### source database "[DATABASE_NAME]" is being accessed by other users
+```console
+SELECT *, pg_terminate_backend(pid) 
+FROM pg_stat_activity 
+WHERE usename='[DATABASE_NAME]';
+```
+
+sources :
+ - http://stackoverflow.com/questions/5408156/how-to-drop-a-postgresql-database-if-there-are-active-connections-to-it
+ - http://stackoverflow.com/questions/14374726/postgresql-cant-create-database-operationalerror-source-database-template
+
 ### Postgres URL format
 use the following template in every Django projects `postgres://username:password@hostname/db_name`
 
