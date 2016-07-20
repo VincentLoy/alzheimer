@@ -16,6 +16,11 @@ git tag -d [TAG_NAME]
 git push origin :refs/tags/[TAG_NAME]
 ```
 
+### Get titles of all commits for today
+```console
+git log --since=midnight --author="$(git config user.name)" --oneline
+```
+
 ### Clean local merged branches
 ```console
 git fetch -p && git branch --merged develop | grep -v 'master$' | grep -v 'develop$' | xargs git branch -d
