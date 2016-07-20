@@ -22,3 +22,13 @@ $ for i in *.png; do convert $i -resize 50% $i;done
 ```console
 $ zip -r foo.zip dir_path
 ```
+
+### find all files that end with newline
+```console
+$ find -type f -exec sh -c '[ -z "$(sed -n "\$p" "$1")" ]' _ {} \; -print
+```
+
+### find all files that doesn't end with newline
+```console
+$ find -type f -exec sh -c '[ -n "$(sed -n "\$p" "$1")" ]' _ {} \; -print
+```
