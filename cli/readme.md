@@ -23,12 +23,30 @@ $ for i in *.png; do convert $i -resize 50% $i;done
 $ zip -r foo.zip dir_path
 ```
 
-### find all files that end with newline
+### Find all files that end with newline
 ```console
 $ find -type f -exec sh -c '[ -z "$(sed -n "\$p" "$1")" ]' _ {} \; -print
 ```
 
-### find all files that doesn't end with newline
+### Find all files that doesn't end with newline
 ```console
 $ find -type f -exec sh -c '[ -n "$(sed -n "\$p" "$1")" ]' _ {} \; -print
+```
+
+### How to kill a process running on particular port in Linux
+example with port `8080` - seen [here](http://stackoverflow.com/questions/11583562/how-to-kill-a-process-running-on-particular-port-in-linux).
+
+list any process listening to the port 8080
+```console
+lsof -i:8080
+```
+
+Kill any process on port 8080
+```console
+kill $(lsof -t -i:8080)
+```
+
+More violent way to do it
+```console
+kill -9 $(lsof -t -i:8080)
 ```
