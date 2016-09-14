@@ -50,3 +50,9 @@ More violent way to do it
 ```console
 kill -9 $(lsof -t -i:8080)
 ```
+
+### Set the date to current time in FreeBSD (if current date is too shifted for NTP)
+
+```console
+date -f '%a, %d %b %Y %T %Z' "`curl -s -k -I 'https://www.ovh.com/fr' | grep -Fi 'Date:' | sed 's/Date: //'`"
+```
