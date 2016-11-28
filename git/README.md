@@ -30,3 +30,15 @@ git fetch -p && git branch --merged develop | grep -v 'master$' | grep -v 'devel
 ```console
 git branch -v | grep -E 'ahead|behind' | sed -r 's/[ *]\s(\S*).*(\[(ahead|behind).+?\]).*/\1 \2/g'
 ```
+
+### List all modified files in a speific commit
+```console
+git diff-tree --no-commit-id --name-only -r [COMMIT_SHA]
+# or
+git show --stat [COMMIT_SHA]
+```
+
+### List all modified files betwen two commits
+```console
+git diff --name-only SHA1 SHA2
+```
