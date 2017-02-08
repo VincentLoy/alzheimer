@@ -8,27 +8,27 @@
   
 2. install `android sdk`
   ### download android sdk
-  `wget http://dl.google.com/android/android-sdk_r24.2-linux.tgz`
-  `tar -xvf android-sdk_r24.2-linux.tgz`
-  `cd android-sdk-linux/tools`z
+  - `wget http://dl.google.com/android/android-sdk_r24.2-linux.tgz`
+  - `tar -xvf android-sdk_r24.2-linux.tgz`
+  - `cd android-sdk-linux/tools`
 
   ### install all sdk packages
-  ./android update sdk --no-ui
+  - `./android update sdk`
 
 3. set PATH in `~/.zshrc` 
-    - `PATH=${PATH}:$HOME/bin/Android/platform-tools:$HOME/bin/Android/tools:$HOME/bin/Android/build-tools/25.0.2/`
+  - `PATH=${PATH}:$HOME/bin/Android/platform-tools:$HOME/bin/Android/tools:$HOME/bin/Android/build-tools/25.0.2/`
 
 4. install the desired Android platforms
-  `/home/[user]/bin/Android/Sdk/tools/android sdk`
+  - `/home/[user]/bin/Android/Sdk/tools/android sdk`
 
 5. install Android images
-  `/home/[user]/bin/Android/Sdk/tools/android avd`
+  - `/home/[user]/bin/Android/Sdk/tools/android avd`
 
 6. add Android platform to Ionic
-  `ionic platform add android`
+  - `ionic platform add android`
 
 7. Run emulator
-  `ionic emulate android`
+  - `ionic emulate android`
 
 8. Enable your phone for development mode
   go to `Settings > More > About` and tab `Build number` 7 times
