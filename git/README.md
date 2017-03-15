@@ -44,6 +44,18 @@ $ git diff --name-only SHA1 SHA2
 ```
 
 ### Checkout pull request locally
+When you manage project with many pull requests you need a fast way to validate them.
+
+#### By using Git CLI
+```console
+$ git config --add remote.origin.fetch "+refs/pull/*/head:refs/remotes/origin/pr/*"
+```
+Or if you want add it for all your repo at once
+```
+$ git config --global --add remote.origin.fetch "+refs/pull/*/head:refs/remotes/origin/pr/*"
+```
+
+#### By editing manually .git/config
 Edit .git/config and add `fetch = +refs/pull/*/head:refs/remotes/origin/pr/*` to `[remote "origin"]` block.
 
 ```ini
@@ -53,6 +65,7 @@ Edit .git/config and add `fetch = +refs/pull/*/head:refs/remotes/origin/pr/*` to
 	fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
 ```
 
+#### Usage
 Fetch all the pull requests:
 ```console
 $ git fetch origin
