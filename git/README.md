@@ -57,7 +57,7 @@ Fetch all the pull requests:
 ```console
 $ git fetch origin
 From github.com:VincentLoy/alzheimer
- * [nouvelle référence] refs/pull/1/head -> origin/pr/1
+ * [new ref] refs/pull/1/head -> origin/pr/1
 ```
 
 Now you can checkout a particular pull request:
