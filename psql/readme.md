@@ -4,6 +4,12 @@
 $ sudo -u postgres psql
 ```
 
+### Connect as root without sudo
+(as root user)
+```console
+$ su -s /bin/bash postgres
+```
+
 ### Create new user
 ```console
 postgres=# CREATE USER example WITH PASSWORD 'example';
