@@ -59,6 +59,6 @@ date -f '%a, %d %b %Y %T %Z' "`curl -s -k -I 'https://www.ovh.com/fr' | grep -Fi
 
 ### Config a folder for www-data editable by user (for local dev stuff)
 ```console
-chown www-data /path/to/the/folder -Rf 
+sudo chown www-data /path/to/the/folder -Rf 
 sudo chmod 775 -R /path/to/the/folder
 ```
